@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Introduction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple SPA (single page application) that allows users to play the board game, snake oil. The game is played with 4-10 players and is a party game. The game is played in rounds, where one player is the customer and the other players are salesmen. The customer draws a card with a role on it, and the salesmen must pitch a product to the customer that they think would be the best fit for the role. The customer then chooses the best pitch and the winning salesman gets a point. The game continues until each player has been the customer once. The player with the most points at the end of the game wins.
 
-Currently, two official plugins are available:
+## How to modify this project to suit your needs?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- In the `src/App.tsx` file, there are a `audience` list and a `products` list. You can modify these lists to suit your needs. The `audience` list is a list of roles that the customer can draw. The `products` list is a list of products that the salesmen can pitch to the customer. You can add or remove items from these lists to suit your needs.`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```tsx
+const audience = [
+  "Nurse",
+  "Millionaire",
+  "Baker",
+  "Devil",
+  "Killer",
+  "Dictator",
+  "Dragon",
+];
+const products = [
+  "Utensils",
+  "Lantern",
+  "Vortex",
+  "Cactus",
+  "Box",
+  "Chair",
+  "Honey",
+  "Torch",
+  "Bunny",
+  "Zebra",
+];
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## How to run this project?
+
+```bash
+npm i
+npm run dev
+```
